@@ -1,0 +1,15 @@
+services:
+  werkint_queue.queuestuffprovider:
+    class: Werkint\Bundle\QueueBundle\Service\QueueStuffProvider
+    arguments:
+      - @doctrine.orm.entity_manager
+      - @werkint_queue.repo.job
+      - @werkint_queue.jobrunner
+      - @werkint_mutex.mutexmanager
+    tags:
+      - { name: werkint_command.stuff, class: werkint_queue.jobrunner, tick: 1, priority: -1000 }
+
+  werkint_queue.jobrunner:
+    class: Werkint\Bundle\QueueBundle\Service\JobRunner
+    arguments:
+      - @doctrine.orm.entity_manager

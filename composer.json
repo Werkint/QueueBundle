@@ -1,0 +1,33 @@
+{
+    "name":              "werkint/queue-bundle",
+    "description":       "Queue support",
+    "license":           "GPL-3.0+",
+    "authors":           [
+        {
+            "name":  "Bogdan Yurov",
+            "email": "bogdan@yurov.me"
+        }
+    ],
+    "require":           {
+        "symfony/framework-bundle":              "*",
+        "symfony/console":                       "*",
+        "werkint/mutex-bundle":                  "*",
+        "werkint/framework-extra-bundle":        "*",
+        "werkint/log-bundle":                    "*",
+        "werkint/doctrine-transactional-bundle": "*",
+
+        "php":                                   ">=5.5"
+    },
+    "autoload":          {
+        "psr-4": {
+            "Werkint\\Bundle\\QueueBundle\\": "src/"
+        }
+    },
+    "extra":             {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+
+    "minimum-stability": "dev"
+}
