@@ -2,7 +2,7 @@
 namespace Werkint\Bundle\QueueBundle\Service;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Emisser\Bundle\CoreBundle\Service\Transactional\Annotation\Transactional;
+use Werkint\Bundle\DoctrineTransactionalBundle\Service\Annotation\Transactional;
 use Werkint\Bundle\MutexBundle\Service\SemLock\Annotation\SemLock;
 use Werkint\Bundle\MutexBundle\Service\SemLock\SemLockAwareInterface;
 use Werkint\Bundle\QueueBundle\Entity\Job;
